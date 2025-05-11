@@ -1,163 +1,198 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
 .background {
-  background-color: black;
-  min-height: 100vh;
-  min-width: 100vw;
-  padding-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: black;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .heading {
-  font-family: "Bree Serif";
-  text-align: center;
-  font-size: 45px;
-  transition: color 0.5s ease;
+    color: white;
+    font-family: "Bree Serif";
+    text-align: center;
+    font-size: 45px;
+}
+.heading2 {
+    color: white;
+    font-family: "Bree Serif";
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 10px;
 }
 
-.textbook-container {
-  max-width: 1200px;
-  width: 100%;
-  padding: 20px;
-}
+@media screen and (max-width:767px) {
+    .heading {
+        font-size: 35px;
+    }
 
-.textbook {
-  padding: 40px;
-  margin: 0 auto;
-  border-radius: 10px;
-  width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: auto;
-  max-height: 90vh;
-}
+    .label {
+        font-size: 20px;
+        height: 40px;
+    }
+    .mon{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .text-input{
+        width: 100px;
+    }
+    .input-container{
+        width: 200px;;
+    }
 
-.drop,
-.dr {
-  font-size: 18px;
-  text-align: center;
 }
 
 .input-container {
-  margin-top: 30px;
-  text-align: center;
-  border-style: dashed;
-  border-width: 1px;
-  border-color: lightgray;
-  width: 400px;
-  height: auto;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    margin-top: 30px;
+    text-align: center;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: lightgray;
+    width: 400px;
+    height: auto;
+    margin-right: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.ink {
-  font-size: 100px;
-  color: rgb(122, 111, 111);
+.ink{
+    font-size: 100px;
+    color: rgb(122, 111, 111);
 }
+.input {
+    display: none;
 
+}
+.drop{
+    color: white;
+    font-family: "Roboto";
+    font-size: 18px;
+    text-align: center;
+}
+.dr{
+    font-size: 15px;
+}
 .label {
-  display: block;
-  width: 130px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: white;
-  color: black;
-  font-family: "Roboto";
-  margin-left: 29px;
-  border-radius: 5px;
-  cursor: pointer;
+    display: block;
+    width: 130px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: white;
+    color: black;
+    font-family: "Roboto";
+    margin-left: 29px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .label:hover {
-  color: #de0611;
-  background-color: white;
-  border: 1px dashed #de0611;
-}
-
-.Align-row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.none {
-  display: none;
-}
-
-.custom-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Increased gap between form elements */
-  max-width: 350px;
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
-  overflow-y: auto;
-}
-
-.custom-form label {
-  font-weight: 900;
-  margin-bottom: 4px;
-  color: rgb(250, 245, 245);
-  font-family: "Roboto";
-}
-
-.custom-form input,
-.custom-form select {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: white; /* Changed input background to white */
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.custom-form input:focus,
-.custom-form select:focus {
-  border-color: #007bff;
-}
-
-.text-input {
-  border-radius: 7px;
-  outline: none;
-  min-width: 150px;
-  max-width: 650px;
-  padding: 12px;
-  margin-bottom: 20px; /* Added margin to ensure spacing from other elements */
-  box-sizing: border-box; /* Prevents textarea from merging with the scrollbar */
-}
-
-.file-name {
-  margin-top: 10px;
-  font-size: 14px;
-  color: white;
+    color: #de0611;
+    background-color: white;
+    border: 1px dashed #de0611;
 }
 
 .image-styling {
-  max-width: 100%;
-  max-height: 300px;
-  min-height: 150px;
-  margin-top: 10px;
+    object-fit: cover;
+    max-height: 300px;
+    max-width: 400px;
 }
 
-.image-preview {
-    margin-top: 20px;
-    text-align: center;
+.Align-row {
+    display: flex;
+    justify-content: space-between;
+}
+.none{
+    display: none;
+}
+
+.second {
+    display: none;
+}
+.hide{
+    display: none;
+}
+.alignment{
+    display: flex;
+    justify-content: space-between;
+}
+.mon{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lad{
+    color: white;
+}
+.lady {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    height: 25px;
   }
-/* Ensure textarea doesn’t overlap with scrollbar */
-.custom-form textarea {
-  padding: 12px;
-  resize: vertical; /* Allow vertical resizing */
-  overflow-y: auto;
-}
-
+  .custom-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 300px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .custom-form label {
+    font-weight: 900;
+    margin-bottom: 4px;
+    color:rgb(250, 245, 245);
+    font-family: "Roboto";
+  }
+  
+  .custom-form input,
+  .custom-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .custom-form input:focus,
+  .custom-form select:focus {
+    border-color: #007bff;
+  }
+  .text-input{
+    border-radius: 7px;
+    outline: none;
+    min-width: 150px;
+    max-width: 650px;
+    padding: 10px;
+  }
+  .mad{
+    margin-top: 30px;
+  }
+  .file-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+  }
+  .image-styling {
+    max-width: 100%; /* Ensure the image is responsive */
+    max-height: 300px; 
+    min-height: 150px;/* Optional: limit the height */
+    margin-top: 10px;
+  }
+  
 
