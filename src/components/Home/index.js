@@ -4,8 +4,10 @@ import { useForm, Controller } from 'react-hook-form';
 import { useState, useEffect } from 'react';
 
 const Home = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, setValue } = useForm();
   const [currentStyle, setCurrentStyle] = useState(0); // State for switching styles
+  const [fileName, setFileName] = useState('');
+  const [imageUrl, setImageUrl] = useState(null); // State to store the image URL
 
   const styles = [
     {
@@ -33,6 +35,20 @@ const Home = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+  };
+
+  // Handle file change (set image preview URL and file name)
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFileName(file.name); // Set the file name
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImageUrl(reader.result); // Set the image URL (base64)
+        setValue("image", reader.result); // Store image URL in react-hook-form
+      };
+      reader.readAsDataURL(file); // Read file as base64 URL
+    }
   };
 
   useEffect(() => {
@@ -69,7 +85,7 @@ const Home = () => {
                 type="file" 
                 id="file" 
                 className="none" 
-                onChange={(e) => console.log(e.target.files[0].name)} 
+                onChange={handleFileChange} // Handle file upload
               />
               <div className="Align-row">
                 <label
@@ -87,6 +103,17 @@ const Home = () => {
                 Max file upload 10mb
               </p>
             </div>
+
+            {/* Image Preview: Display the uploaded image if available */}
+            {imageUrl && (
+              <div className="image-preview">
+                <img 
+                  src={imageUrl} 
+                  alt="Uploaded Preview" 
+                  className="image-styling"
+                />
+              </div>
+            )}
 
             {/* Form inputs */}
             <label htmlFor="height" style={{ color: styles[currentStyle].color }}>
@@ -144,4 +171,3 @@ const Home = () => {
 };
 
 export default Home;
-

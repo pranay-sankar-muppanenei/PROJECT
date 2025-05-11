@@ -149,6 +149,10 @@
   margin-top: 10px;
 }
 
+.image-preview {
+    margin-top: 20px;
+    text-align: center;
+  }
 /* Ensure textarea doesn’t overlap with scrollbar */
 .custom-form textarea {
   padding: 12px;
