@@ -4,11 +4,9 @@
 .background {
     background-color: black;
     min-height: 100vh;
-    min-width: 100vw;
     padding-top: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .heading {
@@ -17,59 +15,52 @@
     text-align: center;
     font-size: 45px;
 }
-.heading2 {
-    color: white;
-    font-family: "Bree Serif";
-    text-align: center;
-    margin-top: 20px;
-    font-size: 20px;
-    margin-left: 10px;
-}
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:766px) {
     .heading {
         font-size: 35px;
-    }
-
-    .label {
-        font-size: 20px;
-        height: 40px;
     }
     .mon{
         display: flex;
         flex-direction: column;
+        padding: 30px;
     
     }
     .text-input{
         width: 100px;
     }
-    .input-container{
-        width: 200px;;
+    
+    .mon2{
+        width: 90vw;
+      }
+    .mind{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
     }
+      
 
 }
 
 .input-container {
-    margin-top: 30px;
+    margin: 30px;
     text-align: center;
     border-style: dashed;
     border-width: 1px;
     border-color: lightgray;
-    width: 400px;
+    width: 90%;
     height: auto;
-    margin-right: 30px;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
 }
+
+
 .ink{
     font-size: 100px;
     color: rgb(122, 111, 111);
-}
-.input {
-    display: none;
-
 }
 .drop{
     color: white;
@@ -80,37 +71,10 @@
 .dr{
     font-size: 15px;
 }
-.label {
-    display: block;
-    width: 130px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: white;
-    color: black;
-    font-family: "Roboto";
-    margin-left: 29px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.label:hover {
-    color: #de0611;
-    background-color: white;
-    border: 1px dashed #de0611;
-}
-
-.image-styling {
-    object-fit: cover;
-    max-height: 300px;
-    max-width: 400px;
-}
 
 .Align-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .none{
     display: none;
@@ -128,7 +92,7 @@
 }
 .mon{
     display: flex;
-    justify-content: space-between;
+    width: 100vw;
 }
 
 .lad{
@@ -142,24 +106,45 @@
     font-size: 14px;
     height: 25px;
   }
+  .mon2{
+    width: 60vw;
+  }
   .custom-form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    max-width: 300px;
+    width: 100%;
     margin: 20px auto;
     font-family: Arial, sans-serif;
   }
-  
-  .custom-form label {
+  .mind{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .kd{
+    width: 18%;
+    margin-right: 23px;
+  }
+  .lab{
+    background-color: white;
+    border-width: 0px;
+    height: 30px;
+    width: 120px;
+    color: black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  label {
     font-weight: 900;
-    margin-bottom: 4px;
+    margin-bottom: 14px;
     color:rgb(250, 245, 245);
     font-family: "Roboto";
   }
   
-  .custom-form input,
-  .custom-form select {
+  .inp{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -167,17 +152,43 @@
     font-size: 14px;
     outline: none;
     transition: border-color 0.2s;
+    width: 150px;
+    margin-top: 10px;
+    margin-right: 16px;
+
+  }
+  select {
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 16px;
+  }
+  @media screen and (max-width: 767px){
+    select{
+      width: 170px;
+    }
+    .input-container{
+      width: 80vw;
+    }
+
   }
   
-  .custom-form input:focus,
-  .custom-form select:focus {
+  input:focus,
+  select:focus {
     border-color: #007bff;
   }
   .text-input{
     border-radius: 7px;
     outline: none;
-    min-width: 150px;
-    max-width: 650px;
+    margin-top: 10px;
+    width: 95%;
+    resize: none;
     padding: 10px;
   }
   .mad{
@@ -189,10 +200,127 @@
     color: white;
   }
   .image-styling {
-    max-width: 100%; /* Ensure the image is responsive */
-    max-height: 300px; 
-    min-height: 150px;/* Optional: limit the height */
+    width: 300px; /* Ensure the image is responsive */
+    max-height: 350px; 
+    min-height: 250px;/* Optional: limit the height */
     margin-top: 10px;
+    color:black;
+    background-color: white;
+    font-family: "Roboto";
+    font-size: 15px;
+    padding-top: 10px;
+    border-radius: 6px;
   }
   
 
+.size{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    align-items: center;
+}
+@media  screen and (max-width:767px) {
+  .size{
+    display: flex;
+    width: 100%;
+  }
+  .image-styling{
+    display: flex;
+    align-self: flex-start;
+  }
+  .mon2{
+    display: flex;
+    align-items: center;
+  }
+  .input-container{
+    width: 70%;
+    align-self: flex-start;
+    margin-left: 0px;
+  }
+}
+.button{
+    height: 50px;
+    width: 97%;
+    background-color: #1276e0;
+    color:white;
+    font-family: "Roboto";
+    border-width: 0px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.p{
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+
+
+/* Theme 1 */
+.theme1 {
+  background-color: #ffffff;
+}
+
+.theme1 .heading,
+.theme1 .drop,
+.theme1 .file-name,
+.theme1 .p,
+.theme1 label {
+  color: #000000;
+}
+
+.theme1 .button {
+  background-color: #1276e0;
+  color: white;
+}
+.theme1 .lab{
+  background-color: #1276e0;
+  color: white;
+}
+.theme1 .image-styling {
+  box-shadow: 6px 6px 6px  6px gray;
+}
+
+/* Theme 2 */
+.theme2 {
+  background-color: #1e1e1e;
+}
+
+.theme2 .heading,
+.theme2 .drop,
+.theme2 .file-name,
+.theme2 .p,
+.theme2 label {
+  color: white;
+}
+.theme2 .lab{
+  color: black;
+}
+
+.theme2 .button {
+  background-color: rgb(8, 19, 177);
+  color: white;
+}
+
+/* Theme 3 */
+.theme3 {
+  background-color: #fffae6;
+}
+
+.theme3 .heading,
+.theme3 .drop,
+.theme3 .file-name,
+.theme3 .p,
+.theme3 label {
+  color: #1e3a8a;
+}
+
+.theme3 .image-styling {
+  box-shadow: 6px 6px 6px  6px gray;
+}
+
+.theme3 .button {
+  background-color: orange;
+  color: black;
+}
